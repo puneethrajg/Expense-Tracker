@@ -1,0 +1,280 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-bottom: 2px solid #388E3C;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    font-size: 16px;
+    margin: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase; /* Adds modern feel */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover transition */
+}
+
+nav a:hover {
+    color: #F1F1F1; /* Lighter shade on hover */
+    text-decoration: underline;
+}
+
+/* Container */
+main {
+    padding: 30px;
+    margin-top: 30px;
+}
+
+/* Login Page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #e1f7d5; /* Soft green background for freshness */
+}
+
+.login-form {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Deeper shadow for emphasis */
+    width: 350px;
+    border-radius: 12px; /* Rounded corners for modern look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form:hover {
+    transform: translateY(-5px); /* Hover effect to lift the card */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.login-form input,
+.login-form button {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.login-form input:focus,
+.login-form button:focus {
+    outline: none;
+    border-color: #4CAF50; /* Green border on focus for better interaction */
+}
+
+.login-form button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.login-form button:hover {
+    background-color: #45a049;
+}
+
+/* Expense Dashboard */
+.expense-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.expense-container h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden; /* Rounded corners for the table */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+}
+
+td {
+    background-color: #ffffff;
+}
+
+table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1; /* Light gray for hover effect */
+}
+
+form button {
+    padding: 8px 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: darkred;
+}
+
+/* Chart.js */
+canvas {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    .login-form {
+        width: 80%;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form {
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    table, th, td {
+        font-size: 12px;
+    }
+}
+/* Notifications Container */
+.notifications-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Notification Styles */
+.notification {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    min-width: 300px;
+}
+
+/* Success Notification */
+.notification-success {
+    background-color: #00e676;
+}
+
+/* Info Notification */
+.notification-info {
+    background-color: #007bff;
+}
+
+/* Warning Notification */
+.notification-warning {
+    background-color: #ffca28;
+}
+
+/* Error Notification */
+.notification-error {
+    background-color: #f44336;
+}
+
+/* Close Button */
+.notification-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Action Link */
+.notification-action {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.notification-action:hover {
+    text-decoration: underline;
+}
